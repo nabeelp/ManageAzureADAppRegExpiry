@@ -126,9 +126,7 @@ if ($global:ExpiryAppList.Count -gt 0)
             if ($sendMail)
             {
                 Write-Host ("Sending email to " + $toEmail + " with a list of " + $appCount + " expired or soon to be expired secrets and/or certificates")
-                # TODO: Ensure we use SSL
-                # Send-MailMessage -To $toEmail.Split(',') -From $fromEmail -Cc $ccEmail -Subject "Azure AD Applications Expiring" -BodyAsHtml $emailBody -SmtpServer $SMTPServer -Port $SMTPPort -Credential $emailcred -UseSsl 
-                Send-MailMessage -To $toEmail.Split(',') -From $fromEmail -Cc $ccEmail -Subject $subject -BodyAsHtml $emailBody -SmtpServer $SMTPServer -Port $SMTPPort -Credential $emailcred #-UseSsl 
+                Send-MailMessage -To $toEmail.Split(',') -From $fromEmail -Cc $ccEmail -Subject $subject -BodyAsHtml $emailBody -SmtpServer $SMTPServer -Port $SMTPPort -Credential $emailcred -UseSsl 
             }
             else
             {

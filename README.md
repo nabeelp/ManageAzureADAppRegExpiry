@@ -20,7 +20,7 @@ To run any of the scripts, you will need to:
     Azure Active Directory Graph | Application.ReadWrite.All | Application
 
 2. Grant admin consent for your domain for these permissions
-3. Create a certificate (can be self-signed) and upload to app registration
+3. Create a certificate (can be self-signed) and upload to app registration. For instructions on creating and assigning a self-signed certificate, head over to https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#option-1-upload-a-certificate
 4. Ensure certificate is in the certificate store of the account that will run the script
 5. Record the values that will be used for TenantID, ADAppID and ADAppCertThumbprint parameters of the PowerShell scripts
 6. If running locally, run in an administrator session of Powershell
